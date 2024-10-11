@@ -1,0 +1,91 @@
+
+
+ul>li{
+    list-style: none;
+        
+    
+}
+ul{
+    display: flex; 
+    gap: 20px;
+    font-size: 20px;
+    
+}
+.some{
+    ::selection{
+        background-color: blueviolet;
+        color: white;
+
+    }
+    background-color: lightblue;
+}
+.main::first-letter{
+    font-size: 30px;
+    color:black;
+}
+.next::first-letter{
+    font-size: 30px;
+    color:black;
+}
+    .main-container{
+        background-color: #f1f1f1;
+    }
+    
+    .footer::first-letter{
+        font-size: 40px;
+    }
+    
+
+.main-container{
+    display: grid;
+    grid-template-areas:
+    "header header  header header " 
+    "nav     nav      nav    nav" 
+     "some   some     some   contant"
+   "footer  footer   footer  footer" ;
+   
+    
+   }
+@media screen and  (max-width:576px) {
+    .main-container{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "some"
+        "contant"
+        "footer";
+    }
+    
+}
+@media screen and(max-width:768px) {
+    .main-container{
+        display:grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "some"
+        "contant"
+        "footer" ;
+    }
+    
+}
+
+.header,.nav,.main,.next,.contant,.footer{
+    border: 1px solid black;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.some{
+    grid-area: some;
+}
+.contant{
+    grid-area: contant;
+}
+.footer{
+    grid-area: footer;
+}
